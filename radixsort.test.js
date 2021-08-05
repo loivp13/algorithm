@@ -1,6 +1,6 @@
 const { getDigit, digitCount, mostDigits, radixSort } = require("./radixsort");
 
-describe("testing getDigits", () => {
+describe.skip("testing getDigits", () => {
   test("return an int", () => {
     expect(getDigit(90, 1)).toBe(9);
   });
@@ -13,7 +13,7 @@ describe("testing getDigits", () => {
   });
 });
 
-describe("testing digitCount", () => {
+describe.skip("testing digitCount", () => {
   test("return coutn", () => {
     expect(digitCount(1999)).toBe(4);
   });
@@ -25,7 +25,7 @@ describe("testing digitCount", () => {
   });
 });
 
-describe("testing mostDigits", () => {
+describe.skip("testing mostDigits", () => {
   test("return 4", () => {
     expect(mostDigits([1, 23, 456, 4444])).toBe(4);
   });
@@ -37,7 +37,7 @@ describe("testing mostDigits", () => {
   });
 });
 
-describe("testing radixSort", () => {
+describe.skip("testing radixSort", () => {
   test("return ordered", () => {
     expect(radixSort([1, 23, 456, 4444])).toEqual([1, 23, 456, 4444]);
   });
