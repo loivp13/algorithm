@@ -12,28 +12,8 @@ export default function bubblesort(arr) {
         let temp = arr[i];
         arr[i] = arr[i - 1];
         arr[i - 1] = temp;
-        console.log(arr, "round", i);
       }
     }
   }
   return arr;
 }
-// [8, 5, 2, 9, 5, 6, 3]
-//  L  i
-
-// 1 [5, 2, 8, 5, 6, 3, 9]
-//                   L  i
-// 2
-//                     e
-//     [5, 2, 8, 5, 6, 3, 9]
-
-// 3
-// 4
-// 5
-// 6
-// 7
-
-// [
-//     [1,2],
-//     [3,4]
-// ]
