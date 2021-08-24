@@ -1,18 +1,27 @@
-module.exports = function selectionSort(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    let minIndex = i;
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
+export default function selectionSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  let currentPostion = 0;
+  let switchPosition = 0;
+  let currentMin = arr[currentPostion];
+
+  //
+  for (let k = 0; k < arr.length - 1; k++) {
+    for (let i = k + 1; i < arr.length; i++) {
+      if (arr[i] < currentMin) {
+        currentMin = arr[i];
+        switchPosition = i;
       }
     }
-    if (i !== minIndex) {
-      [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]];
-    }
+    [arr[switchPosition], arr[currentPostion]] = [
+      arr[currentPostion],
+      arr[switchPosition],
+    ];
+    currentPostion++;
+    switchPosition = currentPostion;
+    currentMin = arr[currentPostion];
   }
   return arr;
-};
-
-//  4, 1, 2, 3
-//i 0
-//j    1
+}
