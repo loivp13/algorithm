@@ -1,3 +1,7 @@
+//best case time O(logn)
+//best case space O(logn)
+//worst case time O(n)
+//worst case space O(n)
 class BST {
   constructor(value) {
     this.value = value;
