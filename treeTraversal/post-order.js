@@ -7,3 +7,4 @@ function preOrderTraversal(tree, arr) {
   arr.push(tree.value);
   return arr;
 }
+[].slice
